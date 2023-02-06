@@ -645,7 +645,6 @@ console.log(genID)
 
 // const Moscow = new WeatherForCity(57, 37).getWeather()
 
-
 // Функция проверки массива на дубликаты
 const arr = [15,1,2,3,4,4,5,6,6,7,7,8,9]
 
@@ -659,3 +658,10 @@ const myFunc = (arr) => {
 	// console.log(uniqueMass)
 }
 myFunc(arr)
+
+// Еще один способ проверить массив на дубликаты - это объеект класса Set()
+let array = [1, 'asdf', 'test', 15, {}, 'asdf', 15, {},16, '16']
+
+let clearArray = new Set(array)
+
+console.log(clearArray)
