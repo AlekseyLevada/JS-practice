@@ -665,3 +665,19 @@ let array = [1, 'asdf', 'test', 15, {}, 'asdf', 15, {},16, '16']
 let clearArray = new Set(array)
 
 console.log(clearArray)
+
+
+
+// Каррирование
+// var multiplyAll = a => b  => a.map(w =>  w * b)
+
+
+
+// function wordsToMarks(string){
+// 	var res = []
+// 	var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+// 	for (s of string){
+// 	  res.push(alphabet.findIndex(i => i == s) + 1)
+// 	}
+// 	return res.reduce((partialSum, a) => { return partialSum + a}, 0)
+//   }
