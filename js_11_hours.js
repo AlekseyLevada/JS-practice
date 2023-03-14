@@ -646,12 +646,12 @@ console.log(genID)
 // const Moscow = new WeatherForCity(57, 37).getWeather()
 
 // Функция проверки массива на дубликаты
-const arr = [15,1,2,3,4,4,5,6,6,7,7,8,9]
+const arr = [15, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9]
 
 const myFunc = (arr) => {
 	const uniqueMass = []
 	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] !== arr[i-1] && arr[i] !== arr[i+1]) {
+		if (arr[i] !== arr[i - 1] && arr[i] !== arr[i + 1]) {
 			uniqueMass.push(arr[i])
 		}
 	}
@@ -660,7 +660,7 @@ const myFunc = (arr) => {
 myFunc(arr)
 
 // Еще один способ проверить массив на дубликаты - это объеект класса Set()
-let array = [1, 'asdf', 'test', 15, {}, 'asdf', 15, {},16, '16']
+let array = [1, 'asdf', 'test', 15, {}, 'asdf', 15, {}, 16, '16']
 
 let clearArray = new Set(array)
 
@@ -681,3 +681,56 @@ console.log(clearArray)
 // 	}
 // 	return res.reduce((partialSum, a) => { return partialSum + a}, 0)
 //   }
+
+// const winePromise = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		fetch('https://api.sampleapis.com/wines/reds')
+// 		.then(res => res.json())
+// 		.then(data => resolve(data))
+// 	}, 2000)
+// })
+// winePromise.then(data => console.log(data))
+
+const getWineList = async () => {
+	const wineList = await fetch('https://api.sampleapis.com/wines/reds')
+	.then(res => res.json())
+	.then(data => data)
+	return wineList
+}
+
+const getBeerList = async () => {
+	const beerList = await fetch('https://api.sampleapis.com/beers/ale')
+	.then(res => res.json())
+	.then(data => data)
+	return beerList
+}
+
+
+
+
+const compareAlcohol = () => {
+	const compareMass = []
+	const getWineList = async () => {
+		await fetch('https://api.sampleapis.com/wines/reds')
+		.then(res => res.json())
+		.then(data => {
+			data.map(el => {
+				compareMass.push(el)
+			})
+		})
+	}
+	getWineList()
+	const getBeerList = async () => {
+		await fetch('https://api.sampleapis.com/beers/ale')
+		.then(res => res.json())
+		.then(data => {
+			data.map(el => {
+				compareMass.push(el)
+			})
+		})
+	}
+	getBeerList()
+	return compareMass
+}
+compareAlcohol()
+const someData = compareAlcohol()
