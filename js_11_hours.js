@@ -1,7 +1,3 @@
-//Получение рандомного числа через метод Math. 
-//let randomDigit = Math.ceil(Math.random() *100)
-//let randomDigitWithZero = Math.random()
-
 let newObject = {
 	addByDotWriting: 'newObject.',
 	addBySquareWriting: 'newObject[]'
@@ -18,7 +14,7 @@ newObject.Location = 'Moscow'
 newObject[mySister] = 'Julia'
 newObject[myMother] = 'Galina'
 newObject.DateOfBirth = {
-	Day: 05,
+	Day: 5,
 	Month: 12,
 	Year: 1988,
 }
@@ -386,8 +382,8 @@ btns.forEach(function (element) {
 var myFn = function (e) {
 	var currTarget = e.currentTarget
 	var target = e.target
-	console.log('currTarget', currTarget)
-	console.log('target', target)
+	//console.log('currTarget', currTarget)
+	//console.log('target', target)
 	target.remove()
 }
 
@@ -402,37 +398,37 @@ for (button of buttons) {
 
 //Добавление одиночных карточек по шаблону через динамическое создание объекта в массиве
 
-var mainContainer = document.querySelector('.container__create-task')
-var mainBtn = document.querySelector('.container__btn')
-var inputID = document.querySelector('.input__field__id')
-var inputMainTask = document.querySelector('.input__field__main-text')
-var inputTmpTask = document.querySelector('.input__field__tmp-text')
-
-var data_base = []
-
-var newElement = function () {
-	mainContainer.innerHTML = ''
-	var newMassiveElement = {
-		id: inputID.value,
-		main_text: inputMainTask.value,
-		tmp_text: inputTmpTask.value,
-	}
-	data_base.push(newMassiveElement)
-	data_base.map(function (element) {
-		mainContainer.innerHTML += generateNewTemplate(element)
-	})
-}
-
-var generateNewTemplate = function (information) {
-	return `<div class="container__item" id="${information.id}">
-				<h1>${information.id}</h1>
-				<h1>${information.main_text}</h1>
-				<p>${information.tmp_text}</p>
-			</div>
-			`
-}
-
-mainBtn.addEventListener('click', newElement)
+// var mainContainer = document.querySelector('.container__create-task')
+// var mainBtn = document.querySelector('.container__btn')
+// var inputID = document.querySelector('.input__field__id')
+// var inputMainTask = document.querySelector('.input__field__main-text')
+// var inputTmpTask = document.querySelector('.input__field__tmp-text')
+//
+// var data_base = []
+//
+// var newElement = function () {
+// 	mainContainer.innerHTML = ''
+// 	var newMassiveElement = {
+// 		id: inputID.value,
+// 		main_text: inputMainTask.value,
+// 		tmp_text: inputTmpTask.value,
+// 	}
+// 	data_base.push(newMassiveElement)
+// 	data_base.map(function (element) {
+// 		mainContainer.innerHTML += generateNewTemplate(element)
+// 	})
+// }
+//
+// var generateNewTemplate = function (information) {
+// 	return `<div class="container__item" id="${information.id}">
+// 				<h1>${information.id}</h1>
+// 				<h1>${information.main_text}</h1>
+// 				<p>${information.tmp_text}</p>
+// 			</div>
+// 			`
+// }
+//
+// mainBtn.addEventListener('click', newElement)
 
 
 
@@ -460,7 +456,7 @@ class Name {
 }
 
 const personName = new Name('Ivan')
-console.log(personName)
+//console.log(personName)
 
 
 class Surname extends Name {
@@ -474,7 +470,7 @@ class Surname extends Name {
 }
 
 const personSurname = new Surname('Ivanov')
-console.log(personSurname)
+//console.log(personSurname)
 
 
 
@@ -511,7 +507,7 @@ class Incapsulation extends Name {
 //  приватный атрибут в текущем классе, а также возможно далее обратиться и 
 //	унаследовать приватный атрибут в других классах и экземплярах класса.
 
-console.log(new Incapsulation().getPrivateAttribute())
+//console.log(new Incapsulation().getPrivateAttribute())
 
 
 
@@ -525,18 +521,18 @@ class Incapsulation_2 extends Incapsulation {
 	}
 	getPrivateAttributeFromParent() {
 		const setPrivateAttr = this.getPrivateAttribute()
-		console.log(setPrivateAttr)
+		//console.log(setPrivateAttr)
 		return setPrivateAttr
 	}
 }
 // В результате того что Incapsulation  открыл доступ к приватному атрибуту с помощью метода getPrivateAttribute(), теперь можно обратиться к приватному атрибуту #privateAttribute в Incapsulation_2
 
-console.log('Приватный атрибут Incapsulation в Incapsulation_2', new Incapsulation_2().getPrivateAttribute())
+//console.log('Приватный атрибут Incapsulation в Incapsulation_2', new Incapsulation_2().getPrivateAttribute())
 
 
 const setPrivateAttribute = new Incapsulation_2().getPrivateAttributeFromParent()
 
-console.log(setPrivateAttribute)
+//console.log(setPrivateAttribute)
 
 
 
@@ -557,10 +553,10 @@ class Auto {
 		this.body = ''
 	}
 	getBrand() {
-		console.log(`Представляем вашему вниманию автомобиль бренда ${this.brand}`)
+		//console.log(`Представляем вашему вниманию автомобиль бренда ${this.brand}`)
 	}
 	getFullDescription() {
-		console.log(`Бренд ${this.brand}, в ${this.year} году выпустил с конвеера новейшую модель ${this.mark} оснащенную двигателем ${this.engine} Л/С в кузове ${this.body}`)
+		//console.log(`Бренд ${this.brand}, в ${this.year} году выпустил с конвеера новейшую модель ${this.mark} оснащенную двигателем ${this.engine} Л/С в кузове ${this.body}`)
 	}
 }
 
@@ -622,7 +618,7 @@ const generateUId = () => {
 generateUId()
 
 const genID = generateUId()
-console.log(genID)
+//console.log(genID)
 
 
 
@@ -664,7 +660,7 @@ let array = [1, 'asdf', 'test', 15, {}, 'asdf', 15, {}, 16, '16']
 
 let clearArray = new Set(array)
 
-console.log(clearArray)
+//console.log(clearArray)
 
 
 

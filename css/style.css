@@ -43,7 +43,7 @@ body .auto__card .card-btn {
 }
 body .container__create-task {
   text-align: center;
-  width: 1000px;
+  max-width: 1000px;
   min-height: 50px;
   background-color: rgb(49, 237, 174);
   border: 2px solid #121111;
